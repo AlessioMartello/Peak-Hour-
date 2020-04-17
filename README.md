@@ -11,7 +11,7 @@ Ensure the 'tfl PCUs' tab is selected on the PCU Data page, for each spreadsheet
 
 Note how many sites are to be analysed.
 
-Identify the first and last Row number, in excel, of the rolling hour tables. I.e. Rolling hour value 07:00 starts on row 72 and ends on row 72.
+Identify the first and last Row number, in excel, of the rolling hour tables. I.e. Rolling hour value 07:00 starts on row 72 and ends on row 128.
 If more than one rolling hour table is present, note them all. 
 The program will ask for the start and end of three rolling_hour tables to be input. If only one or two exist, enter these and for the third enter an arbitrary value outside of the range of any data.
 I.e if the parameters for the first table are 37 and 55. The second: 93 and 111. The third dont exist, enter 94 and 95 when prompted.
