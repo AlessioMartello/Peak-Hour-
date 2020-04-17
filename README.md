@@ -3,7 +3,7 @@ A script to automate the calculation of the hour of the day with the largest tra
 
 This script works for Intelligent Data Traffic flow surveys. Following the same format as those found on Sheet 'PCU Data' of the Enfield Town sites.
 
-Download the script.
+Download the most rescent script.
 
 Ensure the survey data to be analysed is in the same folder as the script.
 
