@@ -1,12 +1,4 @@
-# This script works for Intelligent Data Traffic flow surveys. Following the same format as those found on Sheet 'PCU Data' of the Enfield Town sites found here: FILE LOCATION.
-# For Enfield Town 05.12.2019 there are 20 sites, the rolling hour indices are:37,55,93,111,149,167
-# Paddington has 20 and 72, 128
-# Make sure to change the PCU tab to 'tfl PCUs'
-
 import pandas as pd
-
-# Load in the sites. The combination of which you'd like the peak of. Ensure they are in the same folder as this script.
-# Enter manually into the list. Or if they are labelled in order, numerically, use the loop.
 
 # site_list = ['ID05183 Enfield Town - MCC Site 1 - 13.02.2020.xlsx', 'ID05183 Enfield Town - MCC Site 10 - 13.02.2020.xlsx','ID05183 Enfield Town - MCC Site 11 - 13.02.2020.xlsx','ID05183 Enfield Town - MCC Site 14 - 13.02.2020.xlsx', 'ID05183 Enfield Town - MCC Site 18 - 13.02.2020.xlsx' ]
 
@@ -69,3 +61,5 @@ print(PCU_table)
 
 # print result
 print("The peak hour is: " + str(peak_time))
+
+print(PCU_table.shape)
