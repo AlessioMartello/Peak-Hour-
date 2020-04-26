@@ -1,11 +1,11 @@
 # Peak-Hour-
 A script to automate the calculation of the hour of the day with the largest traffic flow, fom traffic survey data.
 
-This script works for Intelligent Data Traffic flow surveys. Following the same format as those found on Sheet 'PCU Data' of the Enfield Town sites.
+This script works for Intelligent Data Traffic flow surveys. Following the same format as those found on Sheet 'PCU Data'.
 
 Download the most rescent script.
 
-Ensure the survey data to be analysed is in the same folder as the script.
+Ensure the all the survey data to be analysed is in the same folder as the script.
 
 Ensure the 'tfl PCUs' tab is selected on the PCU Data page, for each spreadsheet.
 
