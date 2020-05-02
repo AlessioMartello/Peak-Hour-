@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 site_list = []
 number_of_sites = int(input("Enter the number of sites present: "))
 
-# for i in range (number_of_sites+1):
-#     if i == 0:
-#         continue
-#     site_list.append(input("Enter the file name of site number " + str(i) +": ") + ".xlsx")
+for i in range (number_of_sites+1):
+    if i == 0:
+        continue
+    site_list.append(input("Enter the file name of site number " + str(i) +": ") + ".xlsx")
 
-for i in range (number_of_sites):
-        site_list.append('ID05046 Enfield Town Center - MCC Site ' + str(i+1) + ' - 05.12.2019' +'.xlsx')
+# for i in range (number_of_sites):
+#         site_list.append('ID05046 Enfield Town Center - MCC Site ' + str(i+1) + ' - 05.12.2019' +'.xlsx')
 
 # Ask for the size of the tables which contain rolling hour PCU values
 rolling_hour_start1 = (int(input("Enter the Excel row number for which the first rolling hour table starts: ")) - 1)
