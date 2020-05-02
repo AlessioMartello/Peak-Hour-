@@ -1,8 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# site_list = ['ID05183 Enfield Town - MCC Site 1 - 13.02.2020.xlsx', 'ID05183 Enfield Town - MCC Site 10 - 13.02.2020.xlsx','ID05183 Enfield Town - MCC Site 11 - 13.02.2020.xlsx','ID05183 Enfield Town - MCC Site 14 - 13.02.2020.xlsx', 'ID05183 Enfield Town - MCC Site 18 - 13.02.2020.xlsx' ]
-
 site_list = []
 number_of_sites = int(input("Enter the number of sites present: "))
 
@@ -72,10 +70,6 @@ AM_peak_end = 0 + int(input("Enter the number of time intervals for the AM peak 
 inter_peak_start = AM_peak_end + 1
 inter_peak_end = inter_peak_start + int(input("Enter the number of time intervals for the Inter-peak range, include the start and the finish. If there is a gap in the data, enter 2: "))-2
 PM_peak_start = inter_peak_end + 1
-
-print(AM_peak_end)
-print(inter_peak_start)
-print(inter_peak_end)
 
 AM_peak_range = combined_rolling_hours.Sum.iloc[0:AM_peak_end]
 inter_peak_range = combined_rolling_hours.Sum.iloc[inter_peak_start:inter_peak_end]
