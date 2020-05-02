@@ -5,8 +5,14 @@ import matplotlib.pyplot as plt
 
 site_list = []
 number_of_sites = int(input("Enter the number of sites present: "))
+
+# for i in range (number_of_sites+1):
+#     if i == 0:
+#         continue
+#     site_list.append(input("Enter the file name of site number " + str(i) +": ") + ".xlsx")
+
 for i in range (number_of_sites):
-        site_list.append('ID05046 Enfield Town Center - MCC Site ' + str(i+1)+ ' - 05.12.2019.xlsx')
+        site_list.append('ID05046 Enfield Town Center - MCC Site ' + str(i+1) + ' - 05.12.2019' +'.xlsx')
 
 # Ask for the size of the tables which contain rolling hour PCU values
 rolling_hour_start1 = (int(input("Enter the Excel row number for which the first rolling hour table starts: ")) - 1)
@@ -62,10 +68,14 @@ PCU_table = pd.concat([rolling_hour_times, combined_rolling_hours.Sum], axis=1)
 # print result
 print("The peak hour with the greatest PCU flow is: " + str(largest_peak_time))
 
-AM_peak_end = 0 + int(input("Enter the number of time intervals for the AM peak range, including the start and finish: "))
+AM_peak_end = 0 + int(input("Enter the number of time intervals for the AM peak range, including the start and finish: ")) -1
 inter_peak_start = AM_peak_end + 1
-inter_peak_end = inter_peak_start + int(input("Enter the number of time intervals for the Inter-peak range, do not include the start but do include the finish. If there is a gap in the data, enter the size of the gap: "))
+inter_peak_end = inter_peak_start + int(input("Enter the number of time intervals for the Inter-peak range, include the start and the finish. If there is a gap in the data, enter 2: "))-2
 PM_peak_start = inter_peak_end + 1
+
+print(AM_peak_end)
+print(inter_peak_start)
+print(inter_peak_end)
 
 AM_peak_range = combined_rolling_hours.Sum.iloc[0:AM_peak_end]
 inter_peak_range = combined_rolling_hours.Sum.iloc[inter_peak_start:inter_peak_end]
